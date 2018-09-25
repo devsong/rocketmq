@@ -31,7 +31,7 @@ public abstract class InternalLoggerFactory {
 
     private static ConcurrentHashMap<String, InternalLoggerFactory> loggerFactoryCache = new ConcurrentHashMap<String, InternalLoggerFactory>();
 
-    public static InternalLogger getLogger(Class clazz) {
+    public static InternalLogger getLogger(Class<?> clazz) {
         return getLogger(clazz.getName());
     }
 
